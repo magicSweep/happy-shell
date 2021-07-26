@@ -1,3 +1,3 @@
-/// reference path="global.d.ts"
-
-export const h = "h";
+export { button as Button } from "./button";
+export { default as BaseIcon } from "./icons/BaseIcon";
+export { default as CloseIcon } from "./icons/CloseIcon";
