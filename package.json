@@ -4,12 +4,17 @@
   "description": "",
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "cd .. && echo \"Error: no test specified\" && exit 0",
+    "np:test": "cd .. && echo \"Error: no test specified\" && cd src && exit 0",
     "cp": "cp -r ./dist/* ./boom/",
     "cd": "cd ./src && ls",
+    "copyNpmignore": "cp ./.npmignore ./src/.npmignore",
     "copyPackageJson": "cp ./package.json ./src/package.json",
     "removePackageJson": "rm ./src/package.json",
-    "release": "npm run copyPackageJson && cd ./src && npm publish && cd .. && npm run removePackageJson"
+    "removeNpmignore": "rm ./src/.npmignore",
+    "beforePublish": "npm run copyPackageJson && npm run copyNpmignore",
+    "afterPublish": "npm run removePackageJson && npm run removeNpmignore",
+    "release": "npm run beforePublish && cd ./src && np && cd .. && npm run afterPublish"
   },
   "keywords": [],
   "author": "",
