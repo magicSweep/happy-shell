@@ -5,4 +5,5 @@ module.exports = {
   yarn: false,
   contents: "src",
   releaseDraft: false,
+  preview: true,
 };
