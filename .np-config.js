@@ -1,4 +1,5 @@
 module.exports = {
+  publish: true,
   branch: "main",
   // Run npm test
   tests: false,
@@ -8,7 +9,7 @@ module.exports = {
   // Subdirectory to publish
   contents: "src",
   // Open a GitHub release draft after releasing
-  releaseDraft: false,
+  releaseDraft: true,
   // Show tasks without actually executing them
   preview: false,
 };
