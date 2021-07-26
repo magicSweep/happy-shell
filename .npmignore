@@ -1,1 +1,8 @@
 node_modules
+dist
+
+.np-config.js
+
+tsconfig.json
+
+.env
